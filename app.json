@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "nomad-native-diary",
+    "slug": "nomad-native-diary",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "nomad-native-diary"
+}
