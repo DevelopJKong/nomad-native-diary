@@ -1,8 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Realm from 'realm';
 import { DBContext } from './context';
+import Navigator from './navigation/navigator';
 
 const FeelingSchema = {
   name: 'Feeling',
@@ -30,10 +31,9 @@ export default function App() {
 
   return (
     <DBContext.Provider value={realm}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style='auto' />
-      </View>
+      <NavigationContainer>
+        <Navigator />
+      </NavigationContainer>
     </DBContext.Provider>
   );
 }
