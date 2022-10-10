@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const View = styled.View`
   flex: 1;
-  padding: 0px 50px;
+  padding: 0px 30px;
   padding-top: 100px;
   background-color: ${colors.bgColor};
 `;
@@ -14,6 +14,7 @@ const Title = styled.Text`
   color: ${colors.textColor};
   font-size: 38px;
   margin-bottom: 100px;
+  font-weight: 500;
 `;
 
 const Btn = styled.TouchableOpacity`
@@ -27,7 +28,7 @@ const Btn = styled.TouchableOpacity`
   align-items: center;
   background-color: ${colors.bgColor};
   elevation: 5;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 3px rgba(41, 30, 95, 0.2);
 `;
 
 const Home = ({ navigation: { navigate } }) => {
@@ -35,7 +36,7 @@ const Home = ({ navigation: { navigate } }) => {
     <View>
       <Title>My journal</Title>
       <Btn onPress={() => navigate('Write')}>
-        <Ionicons name='add' color='white' size={40} />
+        <Ionicons name='add' color={colors.textColor} size={40} />
       </Btn>
     </View>
   );
